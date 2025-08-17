@@ -1,0 +1,16 @@
+[project]
+name = "stt-input"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pynput>=1.8.1",
+    "pyyaml>=6.0.2",
+    "realtimestt>=0.3.104",
+    "zhconv>=1.4.3",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true

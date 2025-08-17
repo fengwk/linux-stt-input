@@ -1,0 +1,31 @@
+# This is an example configuration file for Linux STT-Input.
+# Rename this file to "config.yaml" and customize it to your needs.
+
+# Sets the global hotkey to trigger recording.
+# Supported modifiers: <alt>, <ctrl>, <shift>
+# Format: '<modifier>+<key>'
+hotkey: "<alt>+z"
+
+# Delay between keystrokes in milliseconds for xdotool.
+# Adjust if characters are missed during typing.
+type_delay: 30
+
+model:
+  # The size of the Whisper model.
+  # Options: tiny, base, small, medium, large
+  # Larger models are more accurate but require more computational resources.
+  size: "small"
+
+  # Specify the language to be transcribed. Leave empty for auto-detection.
+  # Format: Two-letter language code (e.g., en, zh, es, fr)
+  language: "zh"
+
+  # The data type for model computation. Significantly affects performance and memory usage.
+  # - float32: Highest precision, highest resource usage (for high-end GPUs).
+  # - float16: A good balance of performance and precision (recommended for modern GPUs).
+  # - int8: Lowest resource usage, fastest on CPU, slightly lower precision.
+  compute_type: "float16"
+  
+  # Specify the computation device.
+  # Options: "cuda", "cpu"
+  device: "cuda"
