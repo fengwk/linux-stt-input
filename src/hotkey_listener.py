@@ -51,7 +51,12 @@ class HotkeyListener:
             if not self.target_modifier:
                 raise ValueError(f"Unknown modifier: {modifier_str}")
 
-            self.target_key = keyboard.KeyCode.from_char(key_str)
+            target_map = {
+                    '<space>': keyboard.Key.space
+                    }
+            self.target_key = target_map.get(key_str)
+            if not self.target_key:
+                self.target_key = keyboard.KeyCode.from_char(key_str)
 
         except Exception as e:
             logging.error(f"Invalid hotkey string '{self.hotkey_str}': {e}")

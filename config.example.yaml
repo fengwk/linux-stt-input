@@ -4,7 +4,7 @@
 # Sets the global hotkey to trigger recording.
 # Supported modifiers: <alt>, <ctrl>, <shift>
 # Format: '<modifier>+<key>'
-hotkey: "<alt>+z"
+hotkey: "<alt>+<space>"
 
 # Delay between keystrokes in milliseconds for xdotool.
 # Adjust if characters are missed during typing.
